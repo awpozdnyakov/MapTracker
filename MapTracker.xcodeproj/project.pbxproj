@@ -14,9 +14,12 @@
 		E147A09F2B06C9AF00DE77C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147A09D2B06C9AF00DE77C3 /* Main.storyboard */; };
 		E147A0A12B06C9B000DE77C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E147A0A02B06C9B000DE77C3 /* Assets.xcassets */; };
 		E147A0A42B06C9B000DE77C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147A0A22B06C9B000DE77C3 /* LaunchScreen.storyboard */; };
-		E147A0C62B07C48800DE77C3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0C52B07C48800DE77C3 /* MapView.swift */; };
+		E147A0C62B07C48800DE77C3 /* MappView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0C52B07C48800DE77C3 /* MappView.swift */; };
 		E147A0C82B07C4C200DE77C3 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0C72B07C4C200DE77C3 /* MapViewModel.swift */; };
 		E147A0CA2B07C5CD00DE77C3 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0C92B07C5CD00DE77C3 /* MainScreenView.swift */; };
+		E1E266322B08C20F0044647B /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E266312B08C20E0044647B /* MapViewControllerBridge.swift */; };
+		E1E266342B08C2350044647B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E266332B08C2350044647B /* MapViewController.swift */; };
+		E1E266362B08C2840044647B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E266352B08C2840044647B /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +33,12 @@
 		E147A0A02B06C9B000DE77C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E147A0A32B06C9B000DE77C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E147A0A52B06C9B000DE77C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E147A0C52B07C48800DE77C3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E147A0C52B07C48800DE77C3 /* MappView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappView.swift; sourceTree = "<group>"; };
 		E147A0C72B07C4C200DE77C3 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		E147A0C92B07C5CD00DE77C3 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		E1E266312B08C20E0044647B /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
+		E1E266332B08C2350044647B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E1E266352B08C2840044647B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E88517BE5BE1C91992310F2E /* Pods-MapTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapTracker.release.xcconfig"; path = "Target Support Files/Pods-MapTracker/Pods-MapTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,11 +84,8 @@
 		E147A0962B06C9AF00DE77C3 /* MapTracker */ = {
 			isa = PBXGroup;
 			children = (
-				E147A0972B06C9AF00DE77C3 /* AppDelegate.swift */,
-				E147A0992B06C9AF00DE77C3 /* SceneDelegate.swift */,
-				E147A0C52B07C48800DE77C3 /* MapView.swift */,
-				E147A0C72B07C4C200DE77C3 /* MapViewModel.swift */,
-				E147A0C92B07C5CD00DE77C3 /* MainScreenView.swift */,
+				E147A0CD2B07D03300DE77C3 /* AppDelegate */,
+				E147A0CB2B07CFFE00DE77C3 /* Flows */,
 				E147A09B2B06C9AF00DE77C3 /* ViewController.swift */,
 				E147A09D2B06C9AF00DE77C3 /* Main.storyboard */,
 				E147A0A02B06C9B000DE77C3 /* Assets.xcassets */,
@@ -90,6 +93,36 @@
 				E147A0A52B06C9B000DE77C3 /* Info.plist */,
 			);
 			path = MapTracker;
+			sourceTree = "<group>";
+		};
+		E147A0CB2B07CFFE00DE77C3 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				E1E266352B08C2840044647B /* ContentView.swift */,
+				E1E266312B08C20E0044647B /* MapViewControllerBridge.swift */,
+				E1E266332B08C2350044647B /* MapViewController.swift */,
+				E147A0C52B07C48800DE77C3 /* MappView.swift */,
+				E147A0CC2B07D01600DE77C3 /* Views */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		E147A0CC2B07D01600DE77C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E147A0C72B07C4C200DE77C3 /* MapViewModel.swift */,
+				E147A0C92B07C5CD00DE77C3 /* MainScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E147A0CD2B07D03300DE77C3 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E147A0972B06C9AF00DE77C3 /* AppDelegate.swift */,
+				E147A0992B06C9AF00DE77C3 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		F8AFFCFE9E7DAA875F5D648B /* Frameworks */ = {
@@ -218,9 +251,12 @@
 				E147A09C2B06C9AF00DE77C3 /* ViewController.swift in Sources */,
 				E147A0CA2B07C5CD00DE77C3 /* MainScreenView.swift in Sources */,
 				E147A0C82B07C4C200DE77C3 /* MapViewModel.swift in Sources */,
-				E147A0C62B07C48800DE77C3 /* MapView.swift in Sources */,
+				E1E266322B08C20F0044647B /* MapViewControllerBridge.swift in Sources */,
+				E147A0C62B07C48800DE77C3 /* MappView.swift in Sources */,
+				E1E266362B08C2840044647B /* ContentView.swift in Sources */,
 				E147A0982B06C9AF00DE77C3 /* AppDelegate.swift in Sources */,
 				E147A09A2B06C9AF00DE77C3 /* SceneDelegate.swift in Sources */,
+				E1E266342B08C2350044647B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
